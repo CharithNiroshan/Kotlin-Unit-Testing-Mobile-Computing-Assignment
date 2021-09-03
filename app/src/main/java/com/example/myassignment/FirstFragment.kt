@@ -27,7 +27,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.login).setOnClickListener {
+        view.findViewById<Button>(R.id.next).setOnClickListener {
             var coursecode=view.findViewById<EditText>(R.id.cousrecode).text.toString()
             var coursename=view.findViewById<EditText>(R.id.coursename).text.toString()
             var vehicletype=view.findViewById<EditText>(R.id.vehicletype).text.toString()

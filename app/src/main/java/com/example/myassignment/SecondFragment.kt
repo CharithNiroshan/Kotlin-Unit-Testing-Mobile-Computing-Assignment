@@ -1,13 +1,13 @@
 package com.example.myassignment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import androidx.navigation.ActionOnlyNavDirections
 import com.example.myassignment.Vehicles.Vehicle
 import com.example.myassignment.Vehicles.Vehiclefactory
 import kotlin.math.sqrt
@@ -36,7 +36,7 @@ class SecondFragment : Fragment() {
     }
 
     fun createFullCourseName(courseCode :String,courseName : String): String{
-        return "$courseCode - $courseName"
+        return "Full Course Name :$courseCode - $courseName"
     }
 
     private fun getVehicle(vehicleType:String): String? {
@@ -45,7 +45,8 @@ class SecondFragment : Fragment() {
         return vehicle?.drive();
     }
 
-    fun getSquareRoot(value:Int):Int{
-        return sqrt(value.toDouble()).toInt()
+    fun getSquareRoot(value:Int): String {
+        return "Squareroot of the Value You Entered :${sqrt(value.toDouble()).toInt()}"
+
     }
 }
